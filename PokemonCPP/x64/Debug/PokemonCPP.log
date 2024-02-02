@@ -1,0 +1,6 @@
+﻿  Pokemon.cpp
+  PokemonCPP.cpp
+C:\Users\mathys.hymon\Documents\PokemonCPP\PokemonCPP\PokemonCPP.cpp(13,26): error C3867: 'randomNumber::Initialize': non-standard syntax; use '&' to create a pointer to member
+  randomNumber.cpp
+  Trainer.cpp
+  Generating Code...
