@@ -1,5 +1,12 @@
 #include "Pokemon.h"
 
+
+
+Pokemon::Pokemon(string newName, string newDescription, PokeType newType, float newLife, float newAttackDamage)
+	: name(newName), description(newDescription), level(1), lifePoints(newLife), maxLife(newLife), attackdamage(newAttackDamage), type(type)
+{
+}
+
 void Pokemon::Damaged(float damages)
 {
 	lifePoints -= damages;
@@ -28,4 +35,22 @@ void Pokemon::Heal(float healAmount)
 	lifePoints += healAmount;
 	cout << name << " eat a berry which give him " << healAmount << endl;
 	cout << name << " now have " << lifePoints << endl;
+}
+
+void Pokemon::GainXP(int xpAmount)
+{
+	xp += xpAmount;
+
+	if (xp >= 20 * (level / 2)) {
+		xp = 0;
+		level += 1;
+		if (level >= 8) {
+
+		}
+	}
+}
+
+string Pokemon::GetName()
+{
+	return name;
 }

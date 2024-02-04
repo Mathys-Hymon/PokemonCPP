@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/execution-charset:.850 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,12 +128,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="combat.cpp" />
     <ClCompile Include="Pokemon.cpp" />
     <ClCompile Include="PokemonCPP.cpp" />
     <ClCompile Include="randomNumber.cpp" />
     <ClCompile Include="Trainer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="combat.h" />
     <ClInclude Include="Pokemon.h" />
     <ClInclude Include="PokeType.h" />
     <ClInclude Include="randomNumber.h" />

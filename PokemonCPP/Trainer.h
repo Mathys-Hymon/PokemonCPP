@@ -14,14 +14,15 @@ private:
 	int money;
 	float lifePoints;
 	float maxLife;
-	Pokemon pokemons;
-	bool inPokeball = true;
+	vector<Pokemon> pokemons;
+	//Pokemon actualPokemon;
 
 public:
 
-	void InitTrainer(Pokemon ennemy);
-	void FlipflopPokeball();
-	void Die();
-	void Heal(float healAmount);
+	Trainer(string fisrtName, string lastName, string catchPhrase, int money, int life, vector<Pokemon> team );
+	string SayCatchPhrase();
+	string GetName();
+	void AddPokemon(Pokemon newPokemon);
+	void SetName(string newName);
 };
 
