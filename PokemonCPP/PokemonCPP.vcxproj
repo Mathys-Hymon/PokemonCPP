@@ -129,6 +129,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="combat.cpp" />
+    <ClCompile Include="entityRef.cpp" />
+    <ClCompile Include="eventsystem.cpp" />
     <ClCompile Include="Pokemon.cpp" />
     <ClCompile Include="PokemonCPP.cpp" />
     <ClCompile Include="randomNumber.cpp" />
@@ -136,6 +138,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="combat.h" />
+    <ClInclude Include="entityRef.h" />
+    <ClInclude Include="eventsystem.h" />
     <ClInclude Include="Pokemon.h" />
     <ClInclude Include="PokeType.h" />
     <ClInclude Include="randomNumber.h" />

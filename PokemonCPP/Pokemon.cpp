@@ -7,6 +7,11 @@ Pokemon::Pokemon(string newName, string newDescription, PokeType newType, float 
 {
 }
 
+void Pokemon::NewAbility()
+{
+}
+
+
 void Pokemon::Damaged(float damages)
 {
 	lifePoints -= damages;

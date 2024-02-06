@@ -11,7 +11,7 @@ string Trainer::SayCatchPhrase()
 	return catchphrase;
 }
 
-string Trainer::GetName()
+string& Trainer::GetName()
 {
 	return firstName;
 }
@@ -37,7 +37,7 @@ void Trainer::AddPokemon(Pokemon newPokemon)
 	
 }
 
-void Trainer::SetName(string newName)
+void Trainer::SetName(string& newName)
 {
 	firstName = newName;
 }

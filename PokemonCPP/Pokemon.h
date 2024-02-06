@@ -22,6 +22,7 @@ public:
 
 	Pokemon(string name, string description, PokeType type, float life, float attackDamage);
 	void Attack(Pokemon& ennemy);
+	void SetAbility();
 	void Damaged(float damages);
 	void FlipflopPokeball();
 	void Die();

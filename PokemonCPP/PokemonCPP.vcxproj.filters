@@ -30,6 +30,12 @@
     <ClCompile Include="combat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="eventsystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="entityRef.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Pokemon.h">
@@ -45,6 +51,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="combat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eventsystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entityRef.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

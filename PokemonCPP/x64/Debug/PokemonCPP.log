@@ -1,7 +1,0 @@
-﻿  PokemonCPP.cpp
-D:\DEV JEUX\2023\ARTFX 2e ANNEE\PROG\CPP\PokemonCPP\PokemonCPP\PokemonCPP.cpp(41,5): warning C4566: le caractère représenté par le nom de caractère universel '\u2640' ne peut pas être représenté dans la page de codes actuelle (850)
-D:\DEV JEUX\2023\ARTFX 2e ANNEE\PROG\CPP\PokemonCPP\PokemonCPP\PokemonCPP.cpp(44,5): warning C4566: le caractère représenté par le nom de caractère universel '\u2642' ne peut pas être représenté dans la page de codes actuelle (850)
-D:\DEV JEUX\2023\ARTFX 2e ANNEE\PROG\CPP\PokemonCPP\PokemonCPP\PokemonCPP.cpp(52,18): warning C4566: le caractère représenté par le nom de caractère universel '\u0153' ne peut pas être représenté dans la page de codes actuelle (850)
-D:\DEV JEUX\2023\ARTFX 2e ANNEE\PROG\CPP\PokemonCPP\PokemonCPP\PokemonCPP.cpp(124,19): warning C4566: le caractère représenté par le nom de caractère universel '\u0153' ne peut pas être représenté dans la page de codes actuelle (850)
-D:\DEV JEUX\2023\ARTFX 2e ANNEE\PROG\CPP\PokemonCPP\PokemonCPP\PokemonCPP.cpp(153,16): warning C4566: le caractère représenté par le nom de caractère universel '\u0153' ne peut pas être représenté dans la page de codes actuelle (850)
-  PokemonCPP.vcxproj -> D:\DEV JEUX\2023\ARTFX 2e ANNEE\PROG\CPP\PokemonCPP\x64\Debug\PokemonCPP.exe
