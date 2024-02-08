@@ -2,6 +2,7 @@
 
 vector<Pokemon> allPokemons;
 vector<Trainer> trainers;
+vector<Ability> allAbilites;
 
 entityRef::entityRef()
 {
@@ -178,6 +179,7 @@ entityRef::entityRef()
 	   {"Dresseur Ténébreux", "Baker", "L'ombre guide ma stratégie !", 380, 6, {allPokemons[43], allPokemons[62], allPokemons[81], allPokemons[100], allPokemons[119], allPokemons[138]}},
 
 	};
+
 }
 
 Pokemon entityRef::getPokemon(int index)

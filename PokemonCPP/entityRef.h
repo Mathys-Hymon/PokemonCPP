@@ -2,8 +2,7 @@
 #include <vector>
 #include "Pokemon.h"
 #include "Trainer.h"
-
-using namespace std;
+#include "Ability.h"
 
 class entityRef
 {

@@ -17,7 +17,7 @@ void eventsystem::SelectCharacter()
 			cout << "Ah j'ai du mal entendre désolé, comment je dois t'appeler ?" << endl;
 		}
 		else if (answer == "oui") {
-			entityList.getTrainer(0).SetName(answer);
+			entityList.getTrainer(0).SetName(name);
 		};
 	}
 	cout << "Ok ! Ton nom est donc " << entityList.getTrainer(0).GetName() << " !" << endl;
@@ -39,7 +39,7 @@ void eventsystem::SelectCharacter()
 			cout << "Ah ma mémoire me joue vraiment des tours, comment s'appelle t'il déjà ?" << endl;
 		}
 		else if (answer == "oui") {
-			entityList.getTrainer(1).SetName(answer);
+			entityList.getTrainer(1).SetName(name);
 		};
 	}
 	cout << "Mais oui, bien sûr que je m'en souviens, c'est " << entityList.getTrainer(1).GetName();
