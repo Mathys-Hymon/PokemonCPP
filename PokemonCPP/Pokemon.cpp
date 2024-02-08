@@ -55,6 +55,11 @@ void Pokemon::GainXP(int xpAmount)
 	}
 }
 
+void Pokemon::SetName(string newName)
+{
+	name = newName;
+}
+
 string Pokemon::GetName()
 {
 	return name;

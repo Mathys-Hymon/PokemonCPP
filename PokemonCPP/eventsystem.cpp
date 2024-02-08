@@ -79,10 +79,28 @@ void eventsystem::SelectCharacter()
 		}
 	}
 	entityList.getTrainer(0).AddPokemon(entityList.getPokemon(selectedPokemon));
+	ChangeName(selectedPokemon);
+	
 }
 
 void eventsystem::StartFight()
 {
 
+}
+
+string eventsystem::ChangeName(int pokemonIndex)
+{
+	string nameAsnwer = "";
+	answer = "";
+	cout << "Est ce que tu veux lui donner un petit nom ?" << endl;
+	cin >> answer;
+	if (answer == "oui") {
+		cin >> nameAsnwer;
+		entityList.getTrainer(0).getPokemon(pokemonIndex).SetName(nameAsnwer);
+	}
+	else {
+		return entityList.getPokemon(pokemonIndex).GetName();
+	}
+	return string();
 }
 

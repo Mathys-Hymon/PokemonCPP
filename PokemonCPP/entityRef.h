@@ -7,14 +7,12 @@
 class entityRef
 {
 private:
-	vector<Pokemon> allPokemons;
-	vector<Trainer> trainers;
+	static vector<Pokemon> allPokemons;
+	static vector<Trainer> trainers;
 
 public:
-
-	entityRef();
-	Pokemon getPokemon(int index);
-	Trainer getTrainer(int index);
+	Pokemon& getPokemon(int index);
+	Trainer& getTrainer(int index);
 
 };
 

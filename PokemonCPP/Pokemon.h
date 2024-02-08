@@ -28,7 +28,7 @@ public:
 	void Die();
 	void Heal(float healAmount);
 	void GainXP(int xpAmount);
-
+	void SetName(string newName);
 	string GetName();
 };
 

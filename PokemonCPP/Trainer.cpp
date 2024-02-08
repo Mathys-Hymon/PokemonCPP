@@ -16,6 +16,11 @@ string Trainer::GetName()
 	return firstName;
 }
 
+Pokemon Trainer::getPokemon(int index)
+{
+	return pokemons[index];
+}
+
 void Trainer::AddPokemon(Pokemon newPokemon)
 {
 	if (pokemons.size() <= 6) {
@@ -40,6 +45,4 @@ void Trainer::AddPokemon(Pokemon newPokemon)
 void Trainer::SetName(string& newName)
 {
 	firstName = newName;
-	cout << firstName << " : first name";
-	cout << newName << " : new Name";
 }

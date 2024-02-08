@@ -20,6 +20,7 @@ public:
 	Trainer(string fisrtName, string lastName, string catchPhrase, int money, int life, vector<Pokemon> team );
 	string SayCatchPhrase();
 	string GetName();
+	Pokemon getPokemon(int index);
 	void AddPokemon(Pokemon newPokemon);
 	void SetName(string& newName);
 };
