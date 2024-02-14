@@ -15,5 +15,6 @@ public:
 	std::string& getName();
 	int GetDamage();
 	PokeType getPoketype();
+    void SetEnergy(int& energy);
 };
 

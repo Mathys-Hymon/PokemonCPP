@@ -1,7 +1,7 @@
 #include "Ability.h"
 
-Ability::Ability(std::string newName, int newDamage, PokeType newType, int newNum)
-	: name(newName), damage(newDamage), type(newType), useNum(newNum)
+Ability::Ability(std::string newName, int newDamage, PokeType newType, int Usibility)
+	: name(newName), damage(newDamage), type(newType), useNum(Usibility)
 {
 }
 
@@ -19,5 +19,17 @@ PokeType Ability::getPoketype()
 {
 	return type;
 }
+
+void Ability::SetEnergy(int& energy)
+{
+	if (energy == 0) {
+		useNum -= 1;
+	}
+	else {
+		useNum = energy;
+	}
+
+}
+
 
 

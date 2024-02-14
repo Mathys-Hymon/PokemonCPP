@@ -25,11 +25,22 @@ void Trainer::AddPokemon(Pokemon newPokemon)
 {
 	if (pokemons.size() <= 6) {
 		pokemons.push_back(newPokemon);
+
+		string answer = "";
+		cout << "Est ce que tu veux lui donner un petit nom ?" << endl;
+		cout << "oui      non " << endl;
+		cin >> answer;
+		if (answer == "oui") {
+			cout << "Très bien, comment veut tu l'appeler ? " << endl;
+			cin >> answer;
+			newPokemon.SetName(answer);
+		}
+
 		cout << newPokemon.GetName() << " a bien été ajouté dans ton équipe !" << endl;
 	}
 	else {
 		string answer;
-		cout << "Il semble que ta composition d'équipe Pokémon soit actuellement complète. Souhaites-tu libérer un Pokémon pour accueillir celui-ci ?" << endl;
+		cout << "Il semble que ton équipe soit actuellement complète. Souhaites-tu libérer un Pokémon pour accueillir celui-ci ?" << endl;
 		cout << "oui      non " << endl;
 		cin >> answer;
 		if (answer == "oui") {

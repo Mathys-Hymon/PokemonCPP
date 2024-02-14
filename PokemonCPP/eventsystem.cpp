@@ -42,17 +42,15 @@ void eventsystem::SelectCharacter()
 			entityList.getTrainer(1).SetName(name);
 		};
 	}
-	cout << "Mais oui, bien sûr que je m'en souviens, c'est " << entityList.getTrainer(1).GetName();
+	cout << "Mais oui, bien sûr que je m'en souviens, c'est " << entityList.getTrainer(1).GetName() << endl;
 		cin.ignore();
 	cout << "Aujourd'hui est un grand jour, le jour ou vous allez choisir votre premier pokemon !" << endl;
 	cin.ignore();
 	cout << entityList.getTrainer(1).GetName() << " : a toi l'honneur, mais entre nous, peu importe ton choix, sache que je te mettrai inévitablement la pâtée de toute façon !" << endl << endl;
 	cin.ignore();
-	cout << "En premier il y a Bulbizarre, il a une étrange graine plantée sur son dos." << endl;
-	cin.ignore();
-	cout << "Ensuite il y a Carapuce. Son dos durcit avec l'âge et devient une super carapace." << endl;
-	cin.ignore();
-	cout << "Et enfin il y a Salamèche. Il préfère les endroits chauds. En cas de pluie, de la vapeur se forme autour de sa queue." << endl;
+	cout << "En premier il y a Bulbizarre, il a une étrange graine plantée sur son dos." << endl << endl;
+	cout << "Ensuite il y a Carapuce. Son dos durcit avec l'âge et devient une super carapace." << endl << endl;
+	cout << "Et enfin il y a Salamèche. Il préfère les endroits chauds. En cas de pluie, de la vapeur se forme autour de sa queue." << endl << endl;
 	cin.ignore();
 	cout << "Alors, quel pokémon préfèrerais-tu avoir dans ton équipe ?" << endl;
 	cout << endl << "1 - Bulbizarre         2- Carapuce        3-Salamèche" << endl;
@@ -79,28 +77,10 @@ void eventsystem::SelectCharacter()
 		}
 	}
 	entityList.getTrainer(0).AddPokemon(entityList.getPokemon(selectedPokemon));
-	ChangeName(selectedPokemon);
-	
 }
 
 void eventsystem::StartFight()
 {
 
-}
-
-string eventsystem::ChangeName(int pokemonIndex)
-{
-	string nameAsnwer = "";
-	answer = "";
-	cout << "Est ce que tu veux lui donner un petit nom ?" << endl;
-	cin >> answer;
-	if (answer == "oui") {
-		cin >> nameAsnwer;
-		entityList.getTrainer(0).getPokemon(pokemonIndex).SetName(nameAsnwer);
-	}
-	else {
-		return entityList.getPokemon(pokemonIndex).GetName();
-	}
-	return string();
 }
 
