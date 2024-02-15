@@ -11,6 +11,5 @@ private:
 public:
 	void SelectCharacter();
 	void StartFight();
-	string ChangeName(int pokemonIndex);
 };
 

@@ -2,9 +2,11 @@
 
 
 
-Pokemon::Pokemon(string newName, string newDescription, PokeType newType, float newLife)
+Pokemon::Pokemon(string newName, string newDescription, PokeType newType, float newLife,int damage, Ability ability1, Ability ability2)
 	: name(newName), description(newDescription), level(1), lifePoints(newLife), maxLife(newLife), type(type)
 {
+	abilitys.push_back(ability1);
+	abilitys.push_back(ability2);
 }
 
 Ability Pokemon::GetAbility(int index)
@@ -29,10 +31,6 @@ void Pokemon::Damaged(float damages)
 	else {
 		cout << name << " get " << lifePoints << " life left" << endl;
 	}
-}
-
-void Pokemon::FlipflopPokeball() {
-
 }
 
 void Pokemon::Die()

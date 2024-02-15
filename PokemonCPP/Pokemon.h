@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "entityRef.h"
 #include "Poketype.h"
 #include "Ability.h"
 
@@ -17,17 +18,15 @@ private:
 	float lifePoints;
 	float maxLife;
 	float attackdamage;
-	bool inPokeball = true;
 	PokeType type;
 	static vector<Ability> abilitys;
 
 public:
 
-	Pokemon(string name, string description, PokeType type, float life);
+	Pokemon(string name, string description, PokeType type, float life,int damage, Ability ability1, Ability ability2);
 	Ability GetAbility(int index);
 	void NewAbility(Ability newAbility);
 	void Damaged(float damages);
-	void FlipflopPokeball();
 	void Die();
 	void Heal(float healAmount);
 	void GainXP(int xpAmount);
