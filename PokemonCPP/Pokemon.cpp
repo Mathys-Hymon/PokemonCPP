@@ -2,13 +2,19 @@
 
 
 
-Pokemon::Pokemon(string newName, string newDescription, PokeType newType, float newLife, float newAttackDamage)
-	: name(newName), description(newDescription), level(1), lifePoints(newLife), maxLife(newLife), attackdamage(newAttackDamage), type(type)
+Pokemon::Pokemon(string newName, string newDescription, PokeType newType, float newLife)
+	: name(newName), description(newDescription), level(1), lifePoints(newLife), maxLife(newLife), type(type)
 {
 }
 
-void Pokemon::NewAbility()
+Ability Pokemon::GetAbility(int index)
 {
+	return abilitys[index];
+}
+
+void Pokemon::NewAbility(Ability newAbility)
+{
+	abilitys.push_back(newAbility);
 }
 
 

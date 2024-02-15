@@ -174,6 +174,114 @@
 	  {"Dresseur Ténébreux", "Baker", "L'ombre guide ma stratégie !", 380, 6, {allPokemons[43], allPokemons[62], allPokemons[81], allPokemons[100], allPokemons[119], allPokemons[138]}},
 
 	};
+	vector<Ability> entityRef::abilitys = {
+//normal
+{"Charge", 40, Normal, 20},
+{"Ultralaser", 150, Normal, 100}, 
+{"Retour", 70, Normal, 50},
+{"Vive-Attaque", 50, Normal, 30},
+{"Coud'Krâne", 85, Normal, 55},
+//feu
+{"Flammèche", 40, Fire, 25},
+{"Déflagration", 110, Fire, 70},
+{"Poing de Feu", 75, Fire, 40},
+{"Roue de Feu", 60, Fire, 35},
+{"Boutefeu", 120, Fire, 80},
+//water
+{"Pistolet à O", 40, Water, 25},
+{"Surf", 90, Water, 60},
+{"Canon à O", 150, Water, 100},
+{"Aqua-Queue", 80, Water, 50},
+{"Bulles d'O", 65, Water, 40},
+//Grass
+{"Fouet Lianes", 45, Grass, 30},
+{"Lance-Soleil", 120, Grass, 80},
+{"Tranch'Herbe", 55, Grass, 35},
+{"Bomb-Graine", 80, Grass, 50},
+{"Méga-Sangsue", 75, Grass, 45},
+//Electric
+{"Éclair", 40, Electric, 25},
+{"Tonnerre", 90, Electric, 60},
+{"Élecanon", 120, Electric, 80},
+{"Étincelle", 65, Electric, 40},
+{"Poing-Éclair", 75, Electric, 50},
+//Ice
+{"Éclats Glace", 40, Ice, 25},
+{"Blizzard", 110, Ice, 70},
+{"Rayon Glace", 95, Ice, 60},
+{"Avalanche", 80, Ice, 50},
+{"Carapace Glace", 50, Ice, 30},
+//Fighting
+{"Poing-Karaté", 50, Fighting, 35},
+{"Dynamopoing", 100, Fighting, 65},
+{"Balayage", 55, Fighting, 40},
+{"Casse-Brique", 75, Fighting, 50},
+{"Mach Punch", 40, Fighting, 30},
+//Poison
+{"Dard-Venin", 35, Poison, 20},
+{"Bomb-Beurk", 80, Poison, 55},
+{"Toxik", 90, Poison, 60},
+{"Piège de Venin", 70, Poison, 45},
+{"Détricanon", 120, Poison, 80},
+//Ground
+{"Séisme", 100, Ground, 70},
+{"Tunnel", 80, Ground, 50},
+{"Coud'Boue", 55, Ground, 35},
+{"Piétisol", 65, Ground, 40},
+{"Tourbi-Sable", 35, Ground, 25},
+//Flying
+{"Picpic", 35, Flying, 20},
+{"Aéropique", 60, Flying, 40},
+{"Vol", 90, Flying, 55},
+{"Piqué", 120, Flying, 80},
+{"Tranch'Air", 75, Flying, 50},
+//Psychic
+{"Choc Mental", 50, Psychic, 30},
+{"Psyko", 90, Psychic, 60},
+{"Prescience", 120, Psychic, 80},
+//Bug
+{"Dard-Nuée", 40, Bug, 25},
+{"Bourdon", 90, Bug, 60},
+{"Bourdon Fatal", 120, Bug, 80},
+{"Piqûre", 65, Bug, 40},
+{"Lame d'Air", 75, Bug, 50},
+//Rock
+{"Jet-Pierres", 50, Rock, 30},
+{"Lame de Roc", 100, Rock, 65},
+{"Éboulement", 110, Rock, 70},
+{"Exploforce", 120, Rock, 80},
+{"Tomberoche", 80, Rock, 50},
+//Ghost
+{"Ball'Ombre", 80, Ghost, 55},
+{"Ombre Nocturne", 55, Ghost, 40},
+{"Maléfice", 90, Ghost, 60},
+{"Saisie Spectrale", 120, Ghost, 80},
+{"Vent Mauvais", 65, Ghost, 45},
+//Dragon
+ {"Colère", 120, Dragon, 80},
+{"Dracogriffe", 80, Dragon, 50},
+{"Éclat Magique", 75, Dragon, 45},
+{"Dracochoc", 90, Dragon, 60},
+{"Lance-Flamme", 110, Dragon, 70},
+//Dark
+{"Tranche-Nuit", 70, Dark, 45},
+{"Crocs Éclair", 65, Dark, 40},
+{"Morsure", 60, Dark, 35},
+{"Ball'Ombre", 80, Dark, 55},
+{"Poursuite", 40, Dark, 30},
+//Steel
+{"Tête de Fer", 80, Steel, 55},
+{"Lame de Roc", 100, Steel, 70},
+{"Coup d'Boule", 70, Steel, 45},
+{"Griffe Acier", 50, Steel, 30},
+{"Plaie-Croix", 80, Steel, 50},
+//Fairy
+{"Éclat Magique", 75, Fairy, 45 },
+{"Métronome", 0, Fairy, 20},
+{"Dernier Recours", 140, Fairy, 90},
+{"Choc Féerique", 65, Fairy, 40},
+{"Vibra Soin", 0, Fairy, 30},
+	};
 
 	Pokemon& entityRef::getPokemon(int index)
 	{
@@ -183,5 +291,17 @@
 	Trainer& entityRef::getTrainer(int index)
 	{
 		return trainers[index];
+	}
+
+	Ability& entityRef::getAbility(PokeType pokemonType)
+	{
+		vector<Ability> available = {};
+		for (int i = 0; i < abilitys.size(); i++) {
+			if (abilitys[i].getPoketype() == pokemonType) {
+				available.push_back(abilitys[i]);
+			}
+		    
+		}
+		
 	}
 

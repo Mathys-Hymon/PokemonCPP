@@ -1,11 +1,11 @@
 #include "Ability.h"
 
-Ability::Ability(std::string newName, int newDamage, PokeType newType, int Usibility)
-	: name(newName), damage(newDamage), type(newType), useNum(Usibility)
+Ability::Ability(std::string newName, int newDamage, PokeType newType, int Energy)
+	: name(newName), damage(newDamage), type(newType), energy(Energy), maxEnergy(Energy)
 {
 }
 
-std::string& Ability::getName()
+std::string Ability::getName()
 {
 	return name;
 }
@@ -20,15 +20,20 @@ PokeType Ability::getPoketype()
 	return type;
 }
 
-void Ability::SetEnergy(int& energy)
+void Ability::SetEnergy(bool& newEnergy)
 {
-	if (energy == 0) {
-		useNum -= 1;
+	if (newEnergy) {
+		energy = maxEnergy;
 	}
 	else {
-		useNum = energy;
+		energy -= 1;
 	}
 
+}
+
+int Ability::GetEnergy()
+{
+	return energy;
 }
 
 

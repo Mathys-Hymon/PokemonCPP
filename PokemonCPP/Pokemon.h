@@ -1,7 +1,9 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <vector>
 #include "Poketype.h"
+#include "Ability.h"
 
 using namespace std;
 
@@ -17,12 +19,13 @@ private:
 	float attackdamage;
 	bool inPokeball = true;
 	PokeType type;
+	static vector<Ability> abilitys;
 
 public:
 
-	Pokemon(string name, string description, PokeType type, float life, float attackDamage);
-	void Attack(Pokemon& ennemy);
-	void NewAbility();
+	Pokemon(string name, string description, PokeType type, float life);
+	Ability GetAbility(int index);
+	void NewAbility(Ability newAbility);
 	void Damaged(float damages);
 	void FlipflopPokeball();
 	void Die();

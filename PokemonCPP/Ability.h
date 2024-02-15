@@ -8,13 +8,16 @@ class Ability
 private:
 	std::string name;
 	int damage;
+	int energy;
+	int maxEnergy;
 	PokeType type;
 	int useNum;
 public:
-	Ability(std::string newName, int newDamage, PokeType newType,	int newNum);
-	std::string& getName();
+	Ability(std::string newName, int newDamage, PokeType newType,	int Energy);
+	std::string getName();
 	int GetDamage();
 	PokeType getPoketype();
-    void SetEnergy(int& energy);
+    void SetEnergy(bool& newEnergy);
+	int GetEnergy();
 };
 
